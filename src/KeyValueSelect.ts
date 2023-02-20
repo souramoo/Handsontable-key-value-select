@@ -161,7 +161,7 @@ class KeyValueSelectEditor extends BaseEditor {
 
       return;
     }
-    const { wtOverlays } = this.hot.view.wt;
+    const { wtOverlays } = this.hot.view._wt;
     const currentOffset: any = offset(this.TD);
     const containerOffset: any = offset(this.hot.rootElement);
     const scrollableContainer = wtOverlays.scrollableElement;
@@ -230,7 +230,7 @@ class KeyValueSelectEditor extends BaseEditor {
    * @returns {HTMLTableCellElement|undefined}
    */
   getEditedCell() {
-    const { wtOverlays } = this.hot.view.wt;
+    const { wtOverlays } = this.hot.view._wt;
     const editorSection = this.checkEditorSection() as string;
     let editedCell;
 
